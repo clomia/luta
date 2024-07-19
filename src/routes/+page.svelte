@@ -12,11 +12,9 @@
   // 스프레드 연산자 사용
   const allValues = [...iterable];
   console.log(allValues);
-
   // 디스트럭처링 사용
   const [first, second, ...rest] = iterable;
   console.log(first, second, rest);
-
 </script>
 
 <h1>Welcome to Lutaa</h1>
