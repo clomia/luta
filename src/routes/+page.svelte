@@ -1,24 +1,39 @@
 <script lang="ts">
-  import { MyIterable } from "$lib";
-
-  // 예제 사용법
-  const iterable = new MyIterable<number>(1, 2, 3, 4, 5);
-
-  // for..of 루프 사용
-  for (const value of iterable) {
-    console.log(value);
-  }
-
-  // 스프레드 연산자 사용
-  const allValues = [...iterable];
-  console.log(allValues);
-  // 디스트럭처링 사용
-  const [first, second, ...rest] = iterable;
-  console.log(first, second, rest);
+  let babo = false
 </script>
 
-<h1>Welcome to Lutaa</h1>
+<div class="ab">
+<div class="main">
+<h1>이현경 {babo ? '바보' : '천재'}</h1>
 
-{#each allValues as value }
-  <h3>{value}</h3>
-{/each}
+<button on:click={() => babo = !babo}>
+  {babo ? '천재' : '바보'} 버튼
+</button>
+</div>
+</div>
+
+
+<style>
+  .ab {
+    width: 100vw;
+    height: 100vh;
+    background-color: pink;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+  h1 {
+    font-size: 100px;
+  }
+  button {
+    width: 500px;
+    height: 300px;
+    background-color: black;
+    color: white;
+    font-size: 100px;
+  }
+</style>
